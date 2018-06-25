@@ -17,7 +17,7 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
 @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        response.setCharacterEncoding("text/html;");
+        response.setCharacterEncoding("text/html");
         response.setCharacterEncoding("utf-8");
         PrintWriter out=response.getWriter();
         
@@ -26,9 +26,9 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
         
         if ("smallk".equals(user_id)&&"123".equals(user_password)) {
             //sendRedirect转向某个页面（Servlet） 原则:/项目名/ServletURL
-            response.sendRedirect("../view/MainFrame");
+            response.sendRedirect("/UserManager/MainFrame");
         }else{
-            response.sendRedirect("../view/Login");
+            response.sendRedirect("/UserManager/Login");
         }
     } 
 
